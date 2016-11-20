@@ -1,0 +1,28 @@
+1、将uploadify集成到框架中(建议放置在Public/ext中)
+2、引入核心文件
+        <js href="__JS__/jquery.min.js" /> //jQuery文件
+        <js href="__UPLOADIFY__/jquery.uploadify.min.js" />      //图片上传工具
+        <js href="__LAYER__/layer.js" />                        //图片上传提示小插件
+3、编写js加载事件
+        $(function(){
+            $('#logo').uploadify({
+                        swf:'__UPLOADIFY__/uploadify.swf',      //引入上传文件插件路径
+                        uploader:"{:U('Upload/upload')}",       //上传文件位置
+                        buttonText:'选择文件',
+                        fileTypeDesc:'选择文件',
+                        onUploadSuccess:function(file,data){     //上传成功后触发的事件
+                            //将数组转换成Json
+                            data = $.parseJSON(data);           //获取图片上传成功后的回调数据
+                            if(data.status == false){
+                                layer.msg(data.msg,{icon:5});
+                            }else{
+                                layer.msg(data.msg,{icon:6});
+                                $('#logo-url').val(data.url);
+                                $('#logo-preview').attr('src',data.url);
+                            }
+                        },
+        })
+
+注意：1.获取图片信息 需要在php.ini 中开启 extension=php_fileinfo.dll  否则会报错误：上传文件MIME类型不允许
+     2.使用时需要 需要new一个对象，同时传入配置文件 否则为默认配置
+     3.支持多文件上传

@@ -1,0 +1,31 @@
+1、下载PHPMail
+2、将插件集成到项目中(一般放置在ThinkPHP中的Library中的Vendor中)
+3、在控制器中引入方法
+    public function SendEmail($address)                           //$address收件地址
+        {
+            vendor('PHPMailer.PHPMailerAutoload');
+            $mail = new \PHPMailer;
+            $mail->isSMTP();                                      // 用SMTP协议发送邮件
+            $mail->Host = 'smtp.126.com';                         // 发送邮件的服务器
+            $mail->SMTPAuth = true;                               // 是否需要用户的验证
+            $mail->Username = 'telecomadmin@126.com';             // 发送邮件的账号
+            $mail->Password = 'telecomadmin61';                   // 发送邮件的密码（授权码）
+            $mail->SMTPSecure = 'ssl';                            // 发送的邮件使用什么协议传输数据（或者ssl更安全）
+            $mail->Port = 465;                                    // 发送使用端口
+
+            $mail->setFrom('telecomadmin@126.com');
+            $mail->addAddress($address);                          // 收件人地址
+            $mail->isHTML(true);
+
+            $mail->Subject = '欢迎注册啊咿呀哟商城';
+            $mail->Body = '我就是要注册啊咿呀哟 <b>啊咿呀哟</b>';
+            $mail->AltBody = '我就是要注册啊咿呀哟';
+
+            $mail->CharSet = 'UTF-8';
+            if (!$mail->send()) {
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+                echo 'Message has been sent';
+            }
+        }

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ECSHOP 管理中心 - {$metatitle} </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__CSS__/general.css" rel="stylesheet" type="text/css" />
+    <link href="__CSS__/main.css" rel="stylesheet" type="text/css" />
+    <link href="__UPLOADIFY__/common.css" rel="stylesheet" type="text/css" />
+    <js href="__JS__/jquery.min.js" />
+    <js href="__UPLOADIFY__/jquery.uploadify.min.js" />
+    <js href="__LAYER__/layer.js" />
+
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="{:U('index')}">{$metaenmu}</a></span>
+    <span class="action-span1"><a href="{:U('index')}">ECSHOP 管理中心</a></span>
+    <span id="search_id" class="action-span1"> - {$metatitle} </span>
+    <div style="clear:both"></div>
+</h1>
+
+<div class="tab-div">
+    <div id="tabbar-div">
+        <p>
+            <span class="tab-front" id="general-tab">通用信息</span>
+        </p>
+    </div>
+
+    <div id="tabbody-div">
+        <form  action="{:U()}" method="post">
+            <input type="hidden" name="id" value="{$row.id}">
+            <table width="90%" id="general-table" align="center">
+                <tr>
+                    <td class="label">文章名称：</td>
+                    <td><input type="text" name="name" value="{$row.name}" size="30" />
+                        <span class="require-field">*</span></td>
+                </tr>
+
+                <tr>
+                    <td class="label">文章摘要： </td>
+                    <td>
+                        <input type="text" name="intro" value="{$row.intro}" size="30"/>
+                        <span id="goods_sn_notice"></span><br />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">排序：</td>
+                    <td><input type="text" name="sort" value="{$row.sort}" size="30" placeholder="数值越小越靠前"/><span class="require-field">*</span></td>
+                </tr>
+
+                <tr>
+                    <td class="label">文章分类：</td>
+                    <td>
+                        <select name="article_category_id" id="article_category_id">
+                            <option value="0">请选择文章分类</option>
+                            <foreach name="res" item="res">
+                                <option value="{$res.id}">{$res.name}</option>
+                            </foreach>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label">是否上线：</td>
+
+                    <td>
+                        <input type="radio" name="status" value="1" class="status" checked/> 是
+                        <input type="radio" name="status" value="0" class="status" /> 否
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="label">文章内容： </td>
+                    <td>
+                        <textarea name="content" cols="30" rows="10">{$row.content}</textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="label"></td>
+                    <td>
+                        <input type="submit" value=" 立即添加 " class="button"/>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</div>
+
+<div id="footer">
+    共执行 9 个查询，用时 0.025161 秒，Gzip 已禁用，内存占用 3.258 MB<br />
+    版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。
+</div>
+<script>
+    $(function(){
+        $('form input[name="status"]').val([{$row.status|default = 1}]);
+        $('#article_category_id').val({$row.article_category_id});
+
+    });
+</script>
+</body>
+</html>
