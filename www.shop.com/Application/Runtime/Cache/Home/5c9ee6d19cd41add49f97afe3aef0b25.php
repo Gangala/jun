@@ -62,7 +62,7 @@
 						<li class="checkcode">
 							<label for="">验证码：</label>
 							<input type="text"  name="checkcode" />
-							<img src="<?php echo U('Captcha/show');?>" alt="" onclick="this.src='<?php echo U('Captcha/show');?>?key='+Math.random()"/>
+							<img src="<?php echo U('Captcha/show');?>"  onclick="this.src='<?php echo U('Captcha/show');?>?key='+Math.random()"/>
 						</li>
 						<li>
 							<label for="">&nbsp;</label>

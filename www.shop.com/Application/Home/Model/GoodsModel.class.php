@@ -26,4 +26,13 @@ class GoodsModel extends Model
         //返回商品数据
         return $row;
     }
+
+    /**
+     * 查询购物车列表数据
+     * @param array $goods_ids 商品的id数组
+     * @return mixed
+     */
+    public function getCartListInfoByIds(array $goods_ids){
+          return $this ->where(['id'=>['in',$goods_ids],'status'=>1,'is_on_sale'=>1])->getField('id,name,logo,shop_price');
+    }
 }

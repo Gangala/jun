@@ -20,7 +20,7 @@ class GoodsController extends Controller
     protected function _initialize(){
         $this->_model =D('Goods');
     }
-    public function goods($id){
+    public function index($id){
         //查询商品数据
         $row =$this->_model->getTheRow($id);
         //分配数据并选择视图

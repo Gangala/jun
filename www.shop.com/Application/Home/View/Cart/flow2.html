@@ -1,0 +1,150 @@
+<extend name="Temple:cart_base"/>
+
+
+<block name="css">
+    <link rel="stylesheet" href="__CSS__/fillin.css" type="text/css">
+</block>
+
+
+<block name="main">
+	<!-- 页面头部 start -->
+	<div class="header w990 bc mt15">
+		<div class="logo w990">
+			<h2 class="fl"><a href="{:U('Index/index')}"><img src="__IMG__/logo1.png" alt="京西商城"></a></h2>
+			<div class="flow fr flow2">
+				<ul>
+					<li>1.我的购物车</li>
+					<li class="cur">2.填写核对订单信息</li>
+					<li>3.成功提交订单</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 页面头部 end -->
+	
+	<div style="clear:both;"></div>
+
+	<!-- 主体部分 start -->
+	<div class="fillin w990 bc mt15">
+        <form action="{:U('Order/create_order')}" method="post">
+            <div class="fillin_hd">
+                <h2>填写并核对订单信息</h2>
+            </div>
+
+            <div class="fillin_bd">
+                <!-- 收货人信息  start-->
+                <div class="address">
+
+                            <h3>收货人信息 <a href="{:U('Index/add_address')}" id="address_modify">[修改]</a></h3>
+                            <div class="address_info">
+                                <foreach name="addresses" item="row">
+                                    <p>
+                                        <if condition="$key === 0">
+                                            <input type="radio" value="{$row.id}" name="address_id" checked="checked" /><strong>{$row.name}</strong>  {$row.tel}  {$row.province_name} {$row.city_name} {$row.area_name} {$row.detail_address} </p>
+                                        <else/>
+                                            <input type="radio" value="{$row.id}" name="address_id" /><strong>{$row.name}</strong>  {$row.tel}  {$row.province_name} {$row.city_name} {$row.area_name} {$row.detail_address} </p>
+                                        </if>
+                                    </p>
+                                </foreach>
+
+                            </div>
+
+                        <!-- 收货人信息  end-->
+
+                        <!-- 配送方式 start -->
+                        <div class="delivery">
+                            <h3>送货方式 <a href="javascript:;" id="delivery_modify"></a></h3>
+                            <div class="delivery_info">
+                                <p>
+                                    <input type="radio" value="1" name="delivery_id" checked="checked"/> 顺丰 运费25,速度快,价格高
+                                </p>
+                                <p>
+                                    <input type="radio" value="2" name="delivery_id" /> 天天 运费10,速度一般,价格便宜
+                                </p>
+                                <p>
+                                    <input type="radio" value="3" name="delivery_id" /> 自提 你来,我一直在
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 配送方式 end -->
+
+                        <!-- 支付方式  start-->
+                        <div class="pay">
+                            <h3>支付方式 <a href="javascript:;" id="pay_modify">[修改]</a></h3>
+                            <div class="pay_info">
+                                <p>
+                                    <input type="radio" value="1" name="pay_type_id" checked="checked"/> 微信支付
+                                </p>
+                                <p>
+                                    <input type="radio" value="2" name="pay_type_id"/> 银联在线
+                                </p>
+                                <p>
+                                    <input type="radio" value="3" name="pay_type_id"/> 邮局汇款
+                                </p>
+                                <p>
+                                    <input type="radio" value="4" name="pay_type_id"/> 货到付款
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 支付方式  end-->
+
+                        <!-- 商品清单 start -->
+                        <div class="goods">
+                            <h3>商品清单</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="col1">商品</th>
+                                        <th class="col3">价格</th>
+                                        <th class="col4">数量</th>
+                                        <th class="col5">小计</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <foreach name="goods_detail" item="row">
+                                        <tr>
+                                            <td class="col1"><a href=""><img src="{$row.logo}" alt="" /></a>  <strong><a href="">{$row.name}</a></strong></td>
+                                            <td class="col3">￥{$row.shop_price}</td>
+                                            <td class="col4"> {$row.amount}</td>
+                                            <td class="col5"><span>￥{$row.sub_total}</span></td>
+                                        </tr>
+                                    </foreach>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">
+                                            <ul>
+                                                <li>
+                                                    <span>{$goods_count} 件商品，总商品金额：</span>
+                                                    <em>￥{$total_price}</em>
+                                                </li>
+                                                <li>
+                                                    <span>返现：</span>
+                                                    <em>-￥0.00</em>
+                                                </li>
+                                                <li>
+                                                    <span>运费：</span>
+                                                    <em>￥0.00</em>
+                                                </li>
+                                                <li>
+                                                    <span>应付总额：</span>
+                                                    <em>￥{$total_price}</em>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- 商品清单 end -->
+                    <div class="fillin_ft">
+                        <a href="javascript:$('form').submit();"><span>提交订单</span></a>
+                        <p>应付总额：<strong>￥{$total_price}元</strong></p>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+	</div>
+	<!-- 主体部分 end -->
+</block>

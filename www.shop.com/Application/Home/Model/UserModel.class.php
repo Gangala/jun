@@ -176,7 +176,7 @@ class UserModel extends Model
             //保存token
             $this->_savetoken($user_info,true);
             //保存用户信息到session中
-            session('HOME_INFO',$user_info);
+            session('USER_INFO',$user_info);
             //记录用户的登录时间和ip
             $this ->_saveIpTime($user_info);
             return true;

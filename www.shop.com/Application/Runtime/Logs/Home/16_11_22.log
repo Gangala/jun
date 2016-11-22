@@ -1,0 +1,172 @@
+[ 2016-11-22T22:45:51+08:00 ] 127.0.0.1 /Locations/getListById.html?id=189
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001288s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 189  [ RunTime:0.3327s ]
+
+[ 2016-11-22T22:45:56+08:00 ] 127.0.0.1 /Locations/getListById.html?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 3  [ RunTime:0.3053s ]
+
+[ 2016-11-22T22:46:00+08:00 ] 127.0.0.1 /Locations/getListById.html?id=38
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0216s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 38  [ RunTime:0.3663s ]
+
+[ 2016-11-22T22:46:50+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:47:06+08:00 ] 127.0.0.1 /Locations/getListById.html?id=23
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 23  [ RunTime:0.3304s ]
+
+[ 2016-11-22T22:47:08+08:00 ] 127.0.0.1 /Locations/getListById.html?id=272
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001602s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0227s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 272  [ RunTime:0.3260s ]
+
+[ 2016-11-22T22:47:27+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:47:29+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:48:40+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:48:56+08:00 ] 127.0.0.1 /Locations/getListById.html?id=23
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001566s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0447s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 23  [ RunTime:0.3857s ]
+
+[ 2016-11-22T22:48:58+08:00 ] 127.0.0.1 /Locations/getListById.html?id=277
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001664s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 277  [ RunTime:0.3365s ]
+
+[ 2016-11-22T22:49:14+08:00 ] 127.0.0.1 /Index/edit_address.html
+ERR: 参数错误或者未定义:id
+
+[ 2016-11-22T22:49:14+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:50:17+08:00 ] 127.0.0.1 /Locations/getListById.html?id=23
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 23  [ RunTime:0.3402s ]
+
+[ 2016-11-22T22:50:20+08:00 ] 127.0.0.1 /Locations/getListById.html?id=277
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0238s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 277  [ RunTime:0.3231s ]
+
+[ 2016-11-22T22:50:39+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:52:04+08:00 ] 127.0.0.1 /Locations/getListById.html?id=23
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0219s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 23  [ RunTime:0.3291s ]
+
+[ 2016-11-22T22:52:07+08:00 ] 127.0.0.1 /Locations/getListById.html?id=277
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 277  [ RunTime:0.3279s ]
+
+[ 2016-11-22T22:52:21+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:54:25+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:54:26+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:54:49+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:54:50+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:55:37+08:00 ] 127.0.0.1 /Locations/getListById.html?id=23
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 23  [ RunTime:0.3277s ]
+
+[ 2016-11-22T22:55:39+08:00 ] 127.0.0.1 /Locations/getListById.html?id=276
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `shop_locations` [ RunTime:0.0221s ]
+SQL: SELECT * FROM `shop_locations` WHERE `parent_id` = 276  [ RunTime:0.3307s ]
+
+[ 2016-11-22T22:55:58+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:56:46+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:56:54+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T22:56:55+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:02:10+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:02:12+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:02:22+08:00 ] 127.0.0.1 /Index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:03:58+08:00 ] 127.0.0.1 /index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:04:20+08:00 ] 127.0.0.1 /index/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:13:16+08:00 ] 127.0.0.1 /Cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:13:49+08:00 ] 127.0.0.1 /Cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:14:17+08:00 ] 127.0.0.1 /Cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:14:18+08:00 ] 127.0.0.1 /Cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:16:06+08:00 ] 127.0.0.1 /Cart/index.js.map
+ERR: 非法操作:index.js.map
+
+[ 2016-11-22T23:16:43+08:00 ] 127.0.0.1 /Cart/index.js.map
+ERR: 非法操作:index.js.map
+

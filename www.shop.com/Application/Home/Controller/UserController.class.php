@@ -65,16 +65,21 @@ class UserController extends Controller
             if ($user_info['status'] ===0) {
                 $this ->error('您的账户还未激活，请先前往邮箱激活账号！');
             }
-
             //登录成功
             $rememeber = I('post.remember');
             //更新令牌
             $this->_model->_savetoken($user_info,$rememeber);
             //记录用户session
-            session('HOME_INFO',$user_info);
+            session('USER_INFO',$user_info);
             //记录用户的登录时间和ip
             $this->_model->_saveIpTime($user_info);
-            $this->success('登录成功',U('Index/index'));
+
+            //判断用户是否时候从其他地址跳转过来的
+            $url = cookie('come_url');
+            if(empty($url)){
+                $url = U('Index/index');
+            }
+            $this->success('登录成功',$url);
         }else{
             //调用自动登录
             if ($this->_model->_auto_login() === false) { //自动登录失败

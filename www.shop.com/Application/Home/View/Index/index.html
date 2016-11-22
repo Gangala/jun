@@ -23,7 +23,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+					<li>您好，欢迎来到京西！[<a href="{}">登录</a>] [<a href="register.html">免费注册</a>] </li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
@@ -328,8 +328,8 @@
 							<eq name="rows['goods_status']" value="2">
 								<li>
 									<dl>
-										<dt><a href="{:U('Goods/goods')}?id={$rows.id}"><img src="{$rows.logo}" alt="" /></a></dt>
-										<dd><a href="{:U('Goods/goods')}?id={$rows.id}">{$rows.name}</a></dd>
+										<dt><a href="{:U('Goods/index')}?id={$rows.id}"><img src="{$rows.logo}" alt="" /></a></dt>
+										<dd><a href="{:U('Goods/index')}?id={$rows.id}">{$rows.name}</a></dd>
 										<dd><span>售价：</span><strong> ￥{$rows.shop_price}</strong></dd>
 									</dl>
 								</li>

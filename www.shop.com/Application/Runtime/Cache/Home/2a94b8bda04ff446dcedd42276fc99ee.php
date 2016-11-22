@@ -23,7 +23,7 @@
 			</div>
 			<div class="topnav_right fr">
 				<ul>
-					<li>您好，欢迎来到京西！[<a href="login.html">登录</a>] [<a href="register.html">免费注册</a>] </li>
+					<li>您好，欢迎来到京西！[<a href="{}">登录</a>] [<a href="register.html">免费注册</a>] </li>
 					<li class="line">|</li>
 					<li>我的订单</li>
 					<li class="line">|</li>
@@ -314,8 +314,8 @@
 					<ul>
 						<?php if(is_array($goods_info)): foreach($goods_info as $key=>$rows): if(($rows['goods_status']) == "2"): ?><li>
 									<dl>
-										<dt><a href="<?php echo U('Goods/goods');?>?id=<?php echo ($rows["id"]); ?>"><img src="<?php echo ($rows["logo"]); ?>" alt="" /></a></dt>
-										<dd><a href="<?php echo U('Goods/goods');?>?id=<?php echo ($rows["id"]); ?>"><?php echo ($rows["name"]); ?></a></dd>
+										<dt><a href="<?php echo U('Goods/index');?>?id=<?php echo ($rows["id"]); ?>"><img src="<?php echo ($rows["logo"]); ?>" alt="" /></a></dt>
+										<dd><a href="<?php echo U('Goods/index');?>?id=<?php echo ($rows["id"]); ?>"><?php echo ($rows["name"]); ?></a></dd>
 										<dd><span>售价：</span><strong> ￥<?php echo ($rows["shop_price"]); ?></strong></dd>
 									</dl>
 								</li><?php endif; endforeach; endif; ?>
